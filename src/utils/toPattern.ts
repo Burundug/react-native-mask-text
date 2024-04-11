@@ -26,9 +26,9 @@ function toPattern(
     typeof optionPattern === 'object' ? optionPattern.placeholder : undefined
   let charCounter = 0
   let index
-
   const outputLength = output.length
   for (index = 0; index < outputLength; index++) {
+    console.log(values[charCounter])
     // Reached the end of input
     if (charCounter >= values.length) {
       if (patternChars.length === charsValues.length) {
@@ -42,7 +42,7 @@ function toPattern(
       }
       break
     } else if (
-      (output[index] === DIGIT && values[charCounter].match('#')) ||
+      (output[index] === DIGIT && values[charCounter].match(/[0-9]/)) ||
       (output[index] === ALPHA && values[charCounter].match(/[a-zA-Z]/)) ||
       (output[index] === ALPHANUM &&
         values[charCounter].match(/[0-9a-zA-Z]/)) ||
