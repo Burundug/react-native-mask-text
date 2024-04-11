@@ -18,10 +18,10 @@ function toPattern(
 ): string {
   const pattern =
     typeof optionPattern === 'object' ? optionPattern.pattern : optionPattern
-  const patternChars = pattern.replace(/\W/g, '')
+  const patternChars = pattern.replace('#', '')
   const output = pattern.split('')
-  const values = value.toString().replace(/\W/g, '')
-  const charsValues = values.replace(/\W/g, '')
+  const values = value.toString().replace('#', '')
+  const charsValues = values.replace('#', '')
   const placeholder =
     typeof optionPattern === 'object' ? optionPattern.placeholder : undefined
   let charCounter = 0
@@ -42,7 +42,7 @@ function toPattern(
       }
       break
     } else if (
-      (output[index] === DIGIT && values[charCounter].match(/[0-9]/)) ||
+      (output[index] === DIGIT && values[charCounter].match('#')) ||
       (output[index] === ALPHA && values[charCounter].match(/[a-zA-Z]/)) ||
       (output[index] === ALPHANUM &&
         values[charCounter].match(/[0-9a-zA-Z]/)) ||
