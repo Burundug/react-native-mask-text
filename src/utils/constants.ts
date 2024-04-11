@@ -1,4 +1,4 @@
-export const DIGIT = '9'
+export const DIGIT = '#'
 export const ALPHA = 'A'
 export const ALPHANUM = 'S'
 export const HOURS = 'H'
