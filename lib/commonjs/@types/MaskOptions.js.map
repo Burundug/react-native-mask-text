@@ -1,0 +1,1 @@
+{"version":3,"names":[],"sources":["MaskOptions.ts"],"sourcesContent":["export interface MaskOptions {\r\n  prefix?: string\r\n  decimalSeparator?: string\r\n  groupSeparator?: string\r\n  precision?: number\r\n  groupSize?: number\r\n  secondaryGroupSize?: number\r\n  fractionGroupSeparator?: string\r\n  fractionGroupSize?: number\r\n  suffix?: string\r\n}\r\n"],"mappings":""}

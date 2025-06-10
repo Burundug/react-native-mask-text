@@ -78,6 +78,9 @@ export const MaskedTextInputComponent: ForwardRefRenderFunction<
   const actualValue = pattern || type === "currency" ? maskedValue : rawValue;
 
   function onChange(value: string) {
+    if(value === '8') {
+      value = '79';
+    }
     const newUnMaskedValue = unMask(value, type as 'custom' | 'currency')
     const newMaskedValue = mask(newUnMaskedValue, pattern, type, options)
 
