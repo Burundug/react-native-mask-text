@@ -79,7 +79,7 @@ export const MaskedTextInputComponent: ForwardRefRenderFunction<
 
   function onChange(value: string) {
     let newUnMaskedValue =  unMask(value, type as 'custom' | 'currency')
-    if(newUnMaskedValue === '7') {
+    if(newUnMaskedValue === '7' || newUnMaskedValue === '8') {
       newUnMaskedValue = '7'
     } else if(newUnMaskedValue.length === 1) {
       newUnMaskedValue = '79'
